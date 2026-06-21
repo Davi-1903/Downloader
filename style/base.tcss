@@ -1,0 +1,44 @@
+Screen {
+    align: center middle;
+}
+
+Vertical {
+    align: center middle;
+    max-width: 120;
+    width: 100%;
+}
+
+Static {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2;
+}
+
+Input {
+    outline: none;
+    border: solid $primary;
+    background: transparent;
+    padding: 1 2;
+    height: 5;
+}
+
+Horizontal {
+    margin-top: 2;
+    width: 100%;
+    align: center middle;
+    height: auto;
+}
+
+Button {
+    width: 30%;
+    max-width: 40;
+}
+
+#video {
+    margin-right: 3;
+    background: $primary;
+}
+
+#audio {
+    background: $secondary;
+}
