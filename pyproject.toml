@@ -1,0 +1,21 @@
+[project]
+name = "downloader"
+version = "0.1.0"
+description = "Aplicação para baixar vídeos e áudios do YouTube"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pytubefix>=10.10.0",
+    "textual>=8.2.7",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.18",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "single"
