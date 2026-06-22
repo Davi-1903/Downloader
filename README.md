@@ -1,6 +1,6 @@
 # Downloader
 
-Aplicação para baixar vídeos ou áudios do **YouTube**.
+Aplicação para baixar vídeos ou áudios do **YouTube**. Baixe o executável [Downloader](./Downloader.exe)
 
 <div align="center">
     <img
