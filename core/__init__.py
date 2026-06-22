@@ -10,22 +10,30 @@ def get_downloads_path() -> Path | None:
 
 
 def download_video(url: str) -> tuple[bool, str]:
-    yt = YouTube(url)
-    ys = yt.streams.get_highest_resolution()
-    if ys is None:
-        return False, yt.title
+    try:
+        yt = YouTube(url)
+        ys = yt.streams.get_highest_resolution()
+        if ys is None:
+            return False, yt.title
 
-    path = get_downloads_path()
-    ys.download(str(path))
-    return True, yt.title
+        path = get_downloads_path()
+        ys.download(str(path))
+        return True, yt.title
+
+    except Exception:
+        return False, ''
 
 
 def download_audio(url: str) -> tuple[bool, str]:
-    yt = YouTube(url)
-    ys = yt.streams.get_audio_only()
-    if ys is None:
-        return False, yt.title
+    try:
+        yt = YouTube(url)
+        ys = yt.streams.get_audio_only()
+        if ys is None:
+            return False, yt.title
 
-    path = get_downloads_path()
-    ys.download(str(path))
-    return True, yt.title
+        path = get_downloads_path()
+        ys.download(str(path))
+        return True, yt.title
+
+    except Exception:
+        return False, ''

@@ -51,8 +51,10 @@ class Downloader(App):
             self.notify(
                 f'O vídeo [bold]{result[1]}[/bold] foi baixado com sucesso em [bold]{get_downloads_path()}[/bold]'
             )
-        else:
+        elif result[1] != '':
             self.notify(f'Não foi possível baixar o vídeo [bold]{result[1]}[/bold]', severity='error')
+        else:
+            self.notify('Ocorreu um erro ao baixar o vídeo', severity='error')
 
     @on(Button.Pressed, '#audio')
     def download_audio(self):
@@ -68,8 +70,10 @@ class Downloader(App):
             self.notify(
                 f'O áudio [bold]{result[1]}[/bold] foi baixado com sucesso em [bold]{get_downloads_path()}[/bold]'
             )
-        else:
+        elif result[1] != '':
             self.notify(f'Não foi possível baixar o áudio [bold]{result[1]}[/bold]', severity='error')
+        else:
+            self.notify('Ocorreu um erro ao baixar o áudio', severity='error')
 
 
 if __name__ == '__main__':
