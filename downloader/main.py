@@ -3,7 +3,7 @@ from textual.app import App, ComposeResult
 from textual.binding import Binding
 from textual.containers import Horizontal, Vertical
 from textual.widgets import Button, Footer, Input, Static
-from core import download_video, download_audio, get_downloads_path
+from downloader.core import download_video, download_audio, get_downloads_path
 
 
 TITLE = """
@@ -76,5 +76,10 @@ class Downloader(App):
             self.notify('Ocorreu um erro ao baixar o áudio', severity='error')
 
 
+def main():
+    app = Downloader()
+    app.run()
+
+
 if __name__ == '__main__':
-    Downloader().run()
+    main()

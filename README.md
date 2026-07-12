@@ -19,14 +19,14 @@ Aplicação para baixar vídeos ou áudios do **YouTube**. Baixe o executável [
     cd Downloader
     ```
 
-2. **Baixe as dependências**
+2. **Instale a aplicação**
 
     ```bash
-    uv sync
+    uv tool install .
     ```
 
-3. **Inicie a aplicação**
+3. **Execute em qualquer lugar**
 
     ```bash
-    uv run main.py
+    downloader
     ```
