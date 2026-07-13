@@ -23,7 +23,7 @@ class Downloader(App):
     def compose(self) -> ComposeResult:
         with Vertical():
             yield Static(TITLE)
-            widget_input = Input(placeholder='Insira a URL do vídeo', id='entry')
+            widget_input = Input(placeholder='Insira a URL do vídeo do YouTube', id='entry')
             widget_input.border_title = 'URL'
             yield widget_input
             with Horizontal():
@@ -63,7 +63,6 @@ class Downloader(App):
             self.notify('Informe a [bold u]URL[/bold u] do vídeo', severity='error')
             return
 
-        self.set_empty()
         self.set_empty()
         result = download_audio(url)
         if result[0]:
